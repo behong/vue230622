@@ -54,8 +54,6 @@ export default {
   color: #2c3e50;
 }
 
-
-
 .room-img{
   width:100%;
   margin-top: 40px;
