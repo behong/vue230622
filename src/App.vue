@@ -6,7 +6,7 @@
   
   <MenuOne/>
   
-  <Discount />
+  <Discount v-if="showDiscount" />
 
   <button @click="priceSort">가격순 정렬</button>
 
@@ -23,6 +23,8 @@ import Modal from './components/Modal.vue'
 import Card from './components/Card.vue'
 
 
+
+
 export default {
   name: 'App',
   data(){
@@ -32,6 +34,7 @@ export default {
       모달창열렸니: false,
       원룸s: data,
       누른거 : 0,
+      showDiscount: true,
     }
   },
   methods : {
@@ -43,6 +46,13 @@ export default {
         return a.price - b.price
       })
     }
+  },
+  mounted(){
+    // setTimeout(() =>{
+    //   //배너 닫아줘 
+    //   this.showDiscount = false;
+    // },2000)
+    //1 초마다 1% 낮아진다.
   },
   components: {
     Discount,

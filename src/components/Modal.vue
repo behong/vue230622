@@ -32,6 +32,13 @@ export default {
         누른거: Number,
         모달창열렸니: Boolean,
     },
+    updated(){
+      if(this.month ==2){
+        alert('2개월은 안됨 돌아가~');
+        this.month = 1;
+        return;
+      }
+    },
     watch:{
       month(a){
         //입력한 데이터가 13보다 크면 경고문
