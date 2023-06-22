@@ -5,8 +5,8 @@
   <MenuOne/>
   
   <Discount />
-
-  <Card :상품="원룸s[i]" v-for="(작명,i) in 원룸s" :key="작명" />
+  <!--커스텀 이벤트-->
+  <Card @openModal="모달창열렸니 = true; 누른거 =$event" :상품="원룸s[i]" v-for="(작명,i) in 원룸s" :key="작명" />
 
 </template>
 
